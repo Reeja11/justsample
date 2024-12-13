@@ -1,0 +1,71 @@
+<div class="container" style="margin-top :10px;"> 
+    <div class="row"> 
+        <div class="col-md-11" style="border:.1px solid black; border-radius: 4px; top: 10px;"> 
+            <h3 style="text-align: center; margin-top: 4%;margin-bottom: 4%;">
+                <b>APPLICATION</b> 
+                
+            </h3> 
+            <form [formGroup]="studentRegist" (ngSubmit)="onSubmit()"> 
+                <div class="form-horizontal"> 
+                    <div class="row"> 
+                        <label class="control-label col-12" for="society">Student Name</label> 
+                        <div class="col-12">
+                            <input type="text" class="form-control" formControlName="name" placeholder="Enter the Employee Name" /> 
+                        </div> 
+                    </div> 
+                    <label class="text-danger">*</label>
+                    <br> 
+                    <div class="row"> 
+                        <label class="control-label col-12" for="society">Gender</label>
+                        <div class="col-12">
+                            <input type="radio" formControlName="gender" value="Male" name="gender">&nbsp;&nbsp;Male
+                            <input type="radio" formControlName="gender" value="Female" name="gender">&nbsp;&nbsp;Female 
+                        </div>
+                    </div> 
+                    <label class="text-danger">*</label>
+                    <br>
+                    
+                    <br> 
+                    <div class="row"> 
+                        <label class="control-label col-12" for="society">Contact number</label> 
+                        <div class="col-12"> 
+                            <input type="text" class="form-control" formControlName="mob" Placeholder="Enter the Contact number" /> 
+                        </div> 
+                    </div> 
+                    <label class="text-danger">*</label>
+                    <br> 
+                    <div class="row"> 
+                        <label class="control-label col-12" for="society">Email</label> 
+                        <div class="col-12"> 
+                            <input type="text" class="form-control" formControlName="email" Placeholder="Enter the Email" /> 
+                        </div> 
+                    </div> 
+                    <label class="text-danger">*</label>
+                    <br> 
+                    <div class="row"> 
+                        <label class="control-label col-12" for="society">Course</label> 
+                        <div class="col-12"> 
+                            <select formControlName="course">
+                                <option value="">---Select course---</option> 
+                                <option>BCA</option>
+                                <option>BBA</option>
+                                <option>BCom</option>
+                                <option>MCA</option>
+                                <option>MBA</option>
+                                <option>MCom</option>
+                            </select>
+                        </div> 
+                    </div> 
+                    <label class="text-danger">*</label>
+                    <br>
+                    <div class="row"> 
+                        <div class="col-sm-6"> 
+                            <button type="submit" class="btn btn-primary">Apply</button> 
+                        </div> 
+                    </div> 
+                    <br> 
+                </div> 
+            </form> 
+        </div> 
+    </div> 
+</div>

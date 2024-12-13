@@ -1,0 +1,52 @@
+<br>
+<br>
+<h3 align="center">Student Details</h3>
+<br>
+<br>
+
+<div style="size: 70px;" class="table table-striped">
+    <table border="1px" align="center"  class="thead-dark">
+    <thead >
+        <th>
+            Index
+        </th>
+        <th>
+            Name
+        </th>
+       
+        <th>
+            Gender
+        </th>
+       
+        <th>
+            E-mail
+        </th>
+        <th>
+            Course
+        </th>
+        <th>
+            Mobile
+        </th>
+        <th>
+           Delete
+        </th>
+        <th>
+            Edit
+        </th>
+    </thead>
+    <tr *ngFor="let item of dataarray; index as i;">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.course}}</td>
+        <td>{{item.mobile}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-danger font-weight-bold" (click)="onDelete(item.id)">Delete</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-outline-primary font-weight-bold" [routerLink]="['/edit',item.id]">Update</button>
+        </td>
+    </tr>
+</table>
+</div>
